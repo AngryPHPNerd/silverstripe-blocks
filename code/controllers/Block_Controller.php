@@ -24,6 +24,12 @@ class Block_Controller extends Controller
         parent::__construct();
     }
 
+    public function setFailover($failover)
+    {
+        $this->failover = $failover;
+        $this->defineMethods();
+    }
+
     public function index()
     {
         return;
