@@ -58,17 +58,17 @@ class BlockAdmin extends ModelAdmin
         return $form;
     }
 
-    public function getSearchContext()
-    {
-        $context = parent::getSearchContext();
-        $fields = $context->getFields();
-        $subclasses = $this->blockManager->getBlockClasses();
-        if (sizeof($subclasses) > 1) {
-            $fields->dataFieldByName('q[ClassName]')->setSource($subclasses);
-            $fields->dataFieldByName('q[ClassName]')->setEmptyString('(any)');
-        } else {
-            $fields->removeByName('q[ClassName]');
-        }
-        return $context;
-    }
+//    public function getSearchContext()
+//    {
+//        $context = parent::getSearchContext();
+//        $fields = $context->getFields();
+//        $subclasses = $this->blockManager->getBlockClasses();
+//        if (sizeof($subclasses) > 1) {
+//            $fields->dataFieldByName('q[ClassName]')->setSource($subclasses);
+//            $fields->dataFieldByName('q[ClassName]')->setEmptyString('(any)');
+//        } else {
+//            $fields->removeByName('q[ClassName]');
+//        }
+//        return $context;
+//    }
 }
